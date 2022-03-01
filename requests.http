@@ -1,2 +1,27 @@
-//Create Product
-get http://localhost:3333/products
+@base_url = http://localhost:3333
+
+//Create Products
+POST {{base_url}}/products
+content-type: application/json
+
+{
+  "name": "Pequena Sereia",
+  "price": 2989,
+  "quantity": 20
+}
+
+###
+# @name list_products
+// Index Products
+get {{base_url}}/products
+
+###
+@product_id = {{list_products.response.body.$[0].id}}
+
+###
+// Show Product
+get {{base_url}}/products/{{product_id}}
+
+###
+// Delete Product
+delete {{base_url}}/products/{{product_id}}
