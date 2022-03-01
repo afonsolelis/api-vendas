@@ -4,7 +4,28 @@
 GET {{base_url}}
 
 ###
+//Should return error 400 if name is nil
+POST {{base_url}}/products
+content-type: application/json
+
+{
+  "price": 2989,
+  "quantity": 20
+}
+
+###
 //Create Products
+POST {{base_url}}/products
+content-type: application/json
+
+{
+  "name": "Moby Dick",
+  "price": 2989,
+  "quantity": 20
+}
+
+###
+//Should return already have product with this name
 POST {{base_url}}/products
 content-type: application/json
 
@@ -24,8 +45,29 @@ GET {{base_url}}/products
 @product_id = {{list_products.response.body.$[0].id}}
 
 ###
+// Should return error if id is not valid
+GET {{base_url}}/products/invalid
+
+###
 // Show Product
 GET {{base_url}}/products/{{product_id}}
+
+###
+// Should return error if id is not valid
+PUT {{base_url}}/products/invalid
+
+###
+// Update Product
+PUT {{base_url}}/products/{{product_id}}
+content-type: application/json
+
+{
+  "name": "Moby Dick Remastered"
+}
+
+###
+// Should return error if id is not valid
+DELETE {{base_url}}/products/invalid
 
 ###
 // Delete Product
