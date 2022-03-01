@@ -1,16 +1,16 @@
 # Api de Vendas em NodeJS && TypeScript
 > Esta é uma api para estudo, que simula um back end completo para um setor de vendas.
-> Live demo [_here_](https://www.example.com).
+> Ainda não subi, mas vou fazer deploy na hora certa...
 
-## Table of Contents
-- install REST.client extension in VsCode or your favorite REST client like POSTMAN or INSOMNIA.
-- All documentation is in `requests.http`
+## Para saber
+- Instale a extensão REST.client do VsCode ou outro similar como ThunderClient/Postman/Insomnia
+- Toda documentação REST está no arquivo `requests.http`
 
 
-## General Information
+## Informações gerais
 - Projeto desenvolvido em março de 2022 com o intuito de aprender e desenvolver conhecimento em NodeJS com TypeScript.
 
-## Technologies Used
+## Tecnologias
 - NodeJS
 - Typescript
 - TypeORM
@@ -19,8 +19,7 @@
 - EsLint
 - Prettier
 
-## Features
-List the ready features here:
+## O que essa API faz?
 - CRUD completo de um Produto
 
 ## Setup
@@ -30,5 +29,5 @@ List the ready features here:
 - `yarn typeorm migration:run`
 - `yarn dev`
 
-## Project Status
-Inacabado
+## Status
+Em andamento
