@@ -1,0 +1,11 @@
+@baseUrl = "http://localhost:3333"
+@token = ""
+
+//Create Product
+post http://localhost:3333/products
+
+{
+  "name": "Book 1",
+  "price": 20,
+  "quantity": 5
+}
