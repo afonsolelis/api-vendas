@@ -1,11 +1,15 @@
 @base_url = http://localhost:3333
 
+// Root
+GET {{base_url}}
+
+###
 //Create Products
 POST {{base_url}}/products
 content-type: application/json
 
 {
-  "name": "Pequena Sereia",
+  "name": "Moby Dick",
   "price": 2989,
   "quantity": 20
 }
@@ -13,15 +17,16 @@ content-type: application/json
 ###
 # @name list_products
 // Index Products
-get {{base_url}}/products
+GET {{base_url}}/products
 
 ###
+// Get one product id
 @product_id = {{list_products.response.body.$[0].id}}
 
 ###
 // Show Product
-get {{base_url}}/products/{{product_id}}
+GET {{base_url}}/products/{{product_id}}
 
 ###
 // Delete Product
-delete {{base_url}}/products/{{product_id}}
+DELETE {{base_url}}/products/{{product_id}}
